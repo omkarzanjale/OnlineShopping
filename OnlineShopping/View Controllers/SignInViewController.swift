@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 protocol SignInViewControllerProtocol: class {
     func updatedInfo(user: User)
@@ -57,7 +58,7 @@ class SignInViewController: UIViewController {
         }
     }
     //
-    //MARK: signInBtnAction
+    //MARK: signIn Btn Action
     //
     @IBAction func signInBtnAction(_ sender: Any) {
         guard let checkUserInDatabase = checkUserInDatabase() else {return}
@@ -82,6 +83,28 @@ class SignInViewController: UIViewController {
             navigationController?.pushViewController(signUpViewControllerObj, animated: true)
         } else {
             print("Unable to locate SignUpViewController in storyboard!")
+        }
+    }
+    //
+    //MARK: Google Login
+    //
+    @IBAction func googleLoginBtnAction(_ sender: Any) {
+        let signInConfig = GIDConfiguration(clientID: "627835855505-2r9b5uc932ugd65hom6t4hqnlhi8ju7g.apps.googleusercontent.com")
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { (user, error) in
+            if error == nil {
+                guard let user = user?.profile else {return}
+                let userModel = User(name: user.name, email: user.email, contact: "", password: "")
+                self.delegate?.updatedInfo(user: userModel)
+                if let userProfileViewControllerObj = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") as? UserProfileViewController {
+                    userProfileViewControllerObj.isGoogleAccount = true
+                    userProfileViewControllerObj.user = userModel
+                    self.navigationController?.pushViewController(userProfileViewControllerObj, animated: true)
+                } else {
+                    print("Unable to find UserProfileViewController in storyboard!")
+                }
+            } else {
+                self.showAlert(title: "Failed", message:     "Unable to Login using Google!")
+            }
         }
     }
 }

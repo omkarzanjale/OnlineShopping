@@ -283,7 +283,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="signOutBtnAction:" destination="psX-ec-uqP" eventType="touchUpInside" id="QB2-C8-TsM"/>
+                                    <action selector="signOutBtnAction:" destination="psX-ec-uqP" eventType="touchUpInside" id="YiV-ue-eCt"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ChR-Ea-uZ5">
@@ -321,7 +321,7 @@
                                     <imageReference key="image" image="myorderLogo" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="myOrdersBtnAction:" destination="psX-ec-uqP" eventType="touchUpInside" id="zHa-k7-jYG"/>
+                                    <action selector="myOrdersBtnAction:" destination="psX-ec-uqP" eventType="touchUpInside" id="xcy-S7-mXq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stH-hZ-wpA">
@@ -336,7 +336,7 @@
                                     <imageReference key="image" image="CartLogo" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="myCartBtnAction:" destination="psX-ec-uqP" eventType="touchUpInside" id="Hu5-g3-jgX"/>
+                                    <action selector="myCartBtnAction:" destination="psX-ec-uqP" eventType="touchUpInside" id="Ylx-QY-sje"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6p-fi-vNe">
@@ -458,9 +458,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contactLabel" destination="T3a-Pi-BPX" id="awb-fL-CnZ"/>
-                        <outlet property="emailLabel" destination="ip9-X9-hbW" id="lef-TD-Xwn"/>
-                        <outlet property="nameLabel" destination="e6i-tI-nwj" id="QxR-yN-Owy"/>
+                        <outlet property="contactLabel" destination="T3a-Pi-BPX" id="Aal-aD-7db"/>
+                        <outlet property="contactTextLabel" destination="MsV-8q-PI4" id="ae9-LH-8mE"/>
+                        <outlet property="emailLabel" destination="ip9-X9-hbW" id="YLE-A0-cPw"/>
+                        <outlet property="nameLabel" destination="e6i-tI-nwj" id="bhp-l0-njI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4H-AY-bYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -516,7 +517,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="signInBtnAction:" destination="5tS-9w-PdM" eventType="touchUpInside" id="tnY-8M-uj7"/>
+                                    <action selector="signInBtnAction:" destination="5tS-9w-PdM" eventType="touchUpInside" id="F9E-xQ-2vo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooB-eo-aDy">
@@ -531,7 +532,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpBtnAction:" destination="5tS-9w-PdM" eventType="touchUpInside" id="0Qd-9y-ben"/>
+                                    <action selector="signUpBtnAction:" destination="5tS-9w-PdM" eventType="touchUpInside" id="A32-S5-kwe"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="UserId" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7Z-7h-z4x">
@@ -543,6 +544,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiT-sN-1L2">
+                                <rect key="frame" x="128" y="528" width="35" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="SuN-qh-bda"/>
+                                    <constraint firstAttribute="height" constant="41" id="bFX-wV-HVZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIi-Ff-iTF">
+                                <rect key="frame" x="169" y="530" width="42" height="39"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="81l-KN-huD"/>
+                                    <constraint firstAttribute="width" constant="42" id="Fgr-16-zSC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" image="googleLogo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleLoginBtnAction:" destination="5tS-9w-PdM" eventType="touchUpInside" id="qlN-wg-VvC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yhc-Ib-xWo"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -557,11 +583,16 @@
                             <constraint firstItem="Rd2-Ke-Lc2" firstAttribute="leading" secondItem="yhc-Ib-xWo" secondAttribute="leading" constant="16" id="QNw-gY-Wxz"/>
                             <constraint firstItem="yhc-Ib-xWo" firstAttribute="trailing" secondItem="9IU-OL-lmR" secondAttribute="trailing" constant="53" id="Ttq-Wu-PWH"/>
                             <constraint firstItem="yhc-Ib-xWo" firstAttribute="trailing" secondItem="5tU-bu-L6D" secondAttribute="trailing" constant="134" id="U72-JB-Jth"/>
+                            <constraint firstItem="yhc-Ib-xWo" firstAttribute="trailing" secondItem="xIi-Ff-iTF" secondAttribute="trailing" constant="164" id="X3e-TY-e72"/>
+                            <constraint firstItem="UiT-sN-1L2" firstAttribute="top" secondItem="Rd2-Ke-Lc2" secondAttribute="bottom" constant="-10" id="bsd-hI-I7B"/>
                             <constraint firstItem="5tU-bu-L6D" firstAttribute="leading" secondItem="yhc-Ib-xWo" secondAttribute="leading" constant="133" id="dly-Xi-2qu"/>
                             <constraint firstItem="ooB-eo-aDy" firstAttribute="leading" secondItem="yhc-Ib-xWo" secondAttribute="leading" constant="25" id="eQH-Y8-m46"/>
+                            <constraint firstItem="xIi-Ff-iTF" firstAttribute="top" secondItem="Rd2-Ke-Lc2" secondAttribute="bottom" constant="-8" id="eUD-y8-API"/>
                             <constraint firstItem="yhc-Ib-xWo" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rd2-Ke-Lc2" secondAttribute="trailing" constant="160.5" id="eeY-HY-3J0"/>
                             <constraint firstItem="o7Z-7h-z4x" firstAttribute="top" secondItem="7hg-p9-x9X" secondAttribute="bottom" constant="38.5" id="gip-a2-Gb2"/>
+                            <constraint firstItem="UiT-sN-1L2" firstAttribute="leading" secondItem="ooB-eo-aDy" secondAttribute="trailing" constant="11" id="hQg-uP-a0d"/>
                             <constraint firstItem="yhc-Ib-xWo" firstAttribute="trailing" secondItem="7hg-p9-x9X" secondAttribute="trailing" constant="134" id="s3K-8H-DGS"/>
+                            <constraint firstItem="xIi-Ff-iTF" firstAttribute="leading" secondItem="UiT-sN-1L2" secondAttribute="trailing" constant="6" id="sLu-8u-Ayg"/>
                             <constraint firstItem="5tU-bu-L6D" firstAttribute="top" secondItem="9IU-OL-lmR" secondAttribute="bottom" constant="53" id="sMq-pJ-koT"/>
                             <constraint firstItem="9IU-OL-lmR" firstAttribute="height" secondItem="o7Z-7h-z4x" secondAttribute="height" id="sm8-uo-Ihc"/>
                             <constraint firstItem="yhc-Ib-xWo" firstAttribute="trailing" secondItem="a2w-Tq-mjs" secondAttribute="trailing" constant="93" id="tuh-fu-4Vs"/>
@@ -571,8 +602,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="o7Z-7h-z4x" id="Ajh-bd-Eax"/>
-                        <outlet property="passwordTextField" destination="9IU-OL-lmR" id="6z6-PF-rhV"/>
+                        <outlet property="emailTextField" destination="o7Z-7h-z4x" id="nPd-BC-npf"/>
+                        <outlet property="passwordTextField" destination="9IU-OL-lmR" id="9Sa-d4-pbV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jo7-e8-pPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1191,12 +1222,13 @@
                                 </constraints>
                                 <color key="color" systemColor="labelColor"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CartLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9iH-Q0-3A0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9iH-Q0-3A0">
                                 <rect key="frame" x="145" y="20" width="85" height="80"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="hBY-xF-DGr"/>
                                 </constraints>
+                                <imageReference key="image" image="CartLogo" symbolScale="large"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart is Empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xon-gx-BBm">
                                 <rect key="frame" x="100" y="316" width="175" height="35"/>
@@ -1609,6 +1641,7 @@
         <image name="CartLogo" width="50" height="50"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="googleLogo" width="225" height="225"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="myorderLogo" width="50" height="50"/>
         <image name="person" catalog="system" width="128" height="117"/>

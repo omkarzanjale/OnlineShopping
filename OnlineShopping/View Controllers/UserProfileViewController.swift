@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class UserProfileViewController: UIViewController {
     //
@@ -14,8 +15,10 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var contactLabel: UILabel!
+    @IBOutlet weak var contactTextLabel: UILabel!
     
     var user: User?
+    var isGoogleAccount: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +36,14 @@ class UserProfileViewController: UIViewController {
         guard let user = user else {return}
         nameLabel.text = user.name
         emailLabel.text = user.email
-        contactLabel.text = user.contact
+        if isGoogleAccount {
+            contactTextLabel.isHidden = true
+            contactLabel.isHidden = true
+        }else {
+            contactTextLabel.isHidden = false
+            contactLabel.isHidden = false
+            contactLabel.text = user.contact
+        }
     }
     //
     //MARK: myOrdersBtnAction
@@ -64,6 +74,9 @@ class UserProfileViewController: UIViewController {
     @IBAction func signOutBtnAction(_ sender: Any) {
         HomeViewController.isSignIn = false
         HomeViewController.user = nil
+        if isGoogleAccount {
+            GIDSignIn.sharedInstance.signOut()
+        }
         navigationController?.popToRootViewController(animated: true)
     }
     //
