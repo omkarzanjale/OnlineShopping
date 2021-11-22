@@ -21,15 +21,17 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    private func showAlert(title: String, message: String, navigate: Bool = false) {
+    private func showAlert(title: String, message: String, navigate: Bool){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        if navigate{
-            alert.addAction(UIAlertAction(title: "SignIn", style: .default, handler: { (_) in
-                self.navigationController?.popViewController(animated: true)
-            }))
-        } else {
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        }
+        alert.addAction(UIAlertAction(title: "SignIn", style: .default, handler: { (_) in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
