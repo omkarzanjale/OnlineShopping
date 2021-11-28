@@ -15,7 +15,6 @@ class CartViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var noInternetImg: UIImageView!
     @IBOutlet weak var emptyCartLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
     
     var userEmail: String?
     var cartProducts = [Product]()
