@@ -101,8 +101,8 @@
 		04648A7227280DF000345536 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04D7E50B27353FA3000DE393 /* MensCategoryViewController.swift */,
 				04B3B4DC2705D1AE005D7145 /* HomeViewController.swift */,
+				04D7E50B27353FA3000DE393 /* MensCategoryViewController.swift */,
 				04D7E51627354DCB000DE393 /* WomensCategoryViewController.swift */,
 				04D7E50E27354294000DE393 /* JewelleryCategoryViewController.swift */,
 				04D7E51927354E63000DE393 /* ElectronicsCategoryViewController.swift */,

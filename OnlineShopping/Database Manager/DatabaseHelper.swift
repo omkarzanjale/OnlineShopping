@@ -25,7 +25,7 @@ class DatabaseHelper {
             let documentDir = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(databaseName)
             if sqlite3_open(documentDir.path, &db) == SQLITE_OK {
                 print("Database created and opened successfully.")
-                print("Path: \(documentDir.path)")
+                //print("Path: \(documentDir.path)")
                 return db
             } else {
                 print("Databse already present. DB opned sucessfully.")
